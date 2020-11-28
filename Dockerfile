@@ -3,5 +3,4 @@ RUN apk --update add --no-cache gcc g++ musl-dev make build-base freetype-dev li
 RUN pip install --no-cache-dir robotframework robotframework-extendedrequestslibrary robotframework-faker \
     robotframework-jsonlibrary robotframework-jsonvalidator robotframework-pabot robotframework-randomlibrary \
     robotframework-requests robotframework-jsonschemalibrary robotframework-databaselibrary RESTinstance robotframework-pabot markdown PyMySQL robotframework-mongodb-library
-RUN pip uninstall bson
-RUN pip install pymongo
+RUN pip uninstall -y bson &&  pip install  -y pymongo
